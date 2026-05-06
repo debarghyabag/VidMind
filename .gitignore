@@ -16,3 +16,6 @@ __pycache__/
 # OS Files
 .DS_Store
 Thumbs.db
+
+# Data Storage
+data_storage/
