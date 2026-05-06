@@ -1,5 +1,6 @@
 from fastapi import FastAPI
-from app.api.router.video_id import router as video_id_router
+from app.api.router.video_api import router as video_id_router
+
 
 app = FastAPI(
     title="VidMind API",
