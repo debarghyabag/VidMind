@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from app.core.controller import get_video_transcript
+from app.core.controller import *
 from app.utils.youtube import extract_video_id as _extract_video_id
 
 from app.models.schemas.transcript_schema import ErrorResponse
@@ -33,3 +33,14 @@ async def extract_transcript(video_id: str):
         )
 
     return get_video_transcript(video_id)
+
+
+@router.get("/video/{video_id}/chunks")
+async def extract_chunks(video_id: str):
+
+    if not video_id:
+        return ErrorResponse(
+            error="Invalid video ID"
+        )
+
+    return get_video_chunks(video_id)
