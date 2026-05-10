@@ -1,2 +1,106 @@
 # VidMind
-AI-powered YouTube assistant that generates timestamped video summaries using LLMs and performs YouTube actions through OAuth integration.
+
+VidMind is a FastAPI backend for working with YouTube videos. It can extract a
+video ID from a YouTube URL, fetch the video's transcript, and group transcript
+segments into timestamped chunks.
+
+## Features
+
+- Parse video IDs from common YouTube URL formats.
+- Fetch transcripts with `youtube-transcript-api`.
+- Return timestamped transcript segments.
+- Generate transcript chunks for downstream summarization or analysis.
+- Expose a simple FastAPI API with interactive docs.
+
+## Project Structure
+
+```text
+app/
+  api/router/          API routes
+  core/                Request controllers
+  models/schemas/      Pydantic response and request models
+  services/            Transcript extraction and chunking logic
+  utils/               Path and YouTube URL helpers
+```
+
+## Setup
+
+Create and activate a virtual environment, then install the dependencies:
+
+```bash
+python -m venv deb
+deb\Scripts\activate
+pip install -r requirements.txt
+```
+
+## Run the API
+
+On Windows, you can start the backend with:
+
+```bash
+run_batch_file.bat
+```
+
+Or run FastAPI directly:
+
+```bash
+fastapi dev .\app\main.py
+```
+
+The API will be available at:
+
+```text
+http://127.0.0.1:8000
+```
+
+Interactive API documentation is available at:
+
+```text
+http://127.0.0.1:8000/docs
+```
+
+## API Endpoints
+
+### Health Check
+
+```http
+GET /
+```
+
+Returns the backend status.
+
+### Analyze a YouTube URL
+
+```http
+POST /video/analyze
+Content-Type: application/json
+
+{
+  "url": "https://www.youtube.com/watch?v=VIDEO_ID"
+}
+```
+
+Returns the extracted YouTube video ID.
+
+### Extract Transcript
+
+```http
+GET /video/{video_id}/transcript
+```
+
+Fetches transcript segments for a video and stores the result as JSON.
+
+### Generate Chunks
+
+```http
+GET /video/{video_id}/chunks
+```
+
+Groups transcript segments into timestamped chunks.
+
+## Notes
+
+- Transcript extraction depends on transcript availability for the target
+  YouTube video.
+- Generated data is stored under `app/data_storage`.
+- Chunk generation expects transcript data to exist before chunks are created.
