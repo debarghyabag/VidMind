@@ -44,3 +44,14 @@ async def extract_chunks(video_id: str):
         )
 
     return get_video_chunks(video_id)
+
+
+@router.get("/video/{video_id}/summary")
+async def extract_summary(video_id: str):
+
+    if not video_id:
+        return ErrorResponse(
+            error="Invalid video ID"
+        )
+
+    return get_video_summary(video_id)
