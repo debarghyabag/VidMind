@@ -1,7 +1,6 @@
 from youtube_transcript_api import YouTubeTranscriptApi
 import json
-from pathlib import Path
-from app.utils.paths import FILE_STORAGE_PATH
+from app.utils.paths import TRANSCRIPT_STORAGE_PATH
 
 
 from app.models.schemas.transcript_schema import (
@@ -10,7 +9,7 @@ from app.models.schemas.transcript_schema import (
     ErrorResponse
 )
 
-FILE_STORAGE_PATH.mkdir(parents=True, exist_ok=True)
+TRANSCRIPT_STORAGE_PATH.mkdir(parents=True, exist_ok=True)
 
 
 def extract_transcript(video_id: str):
@@ -35,7 +34,7 @@ def extract_transcript(video_id: str):
             video_id=video_id,
             transcript=segments
         )
-        file_path = FILE_STORAGE_PATH / f"{video_id}.json"
+        file_path = TRANSCRIPT_STORAGE_PATH / f"{video_id}.json"
         with open(file_path, "w") as f:
             json.dump(response.model_dump(), f, indent=4)
 
