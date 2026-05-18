@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" role="img" aria-label="VidMind">
+  <rect width="32" height="32" rx="8" fill="#146c5f"/>
+  <path d="M8 9h4.1l3.9 10.4L19.9 9H24l-6.2 14h-3.6L8 9Z" fill="#fff"/>
+  <circle cx="23" cy="10" r="2" fill="#f4c95d"/>
+</svg>

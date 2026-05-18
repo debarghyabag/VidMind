@@ -16,3 +16,13 @@ services:
         sync: false
       - key: api_version_deb_gpt5
         sync: false
+      - key: WEBSHARE_PROXY_USERNAME
+        sync: false
+      - key: WEBSHARE_PROXY_PASSWORD
+        sync: false
+      - key: WEBSHARE_PROXY_LOCATIONS
+        value: us
+      - key: TRANSCRIPT_HTTP_PROXY
+        sync: false
+      - key: TRANSCRIPT_HTTPS_PROXY
+        sync: false

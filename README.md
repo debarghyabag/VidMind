@@ -105,6 +105,42 @@ Free Render services can sleep after inactivity, so the first request after an
 idle period may take a little longer. Files written to local storage may also be
 lost after restarts or redeploys, so use external storage for long-term results.
 
+### YouTube Transcript Blocking on Render
+
+YouTube often blocks transcript requests from cloud provider IPs. If transcript
+fetching works locally but fails on Render, configure a rotating residential
+proxy in Render.
+
+Supported Webshare environment variables:
+
+```text
+WEBSHARE_PROXY_USERNAME
+WEBSHARE_PROXY_PASSWORD
+WEBSHARE_PROXY_LOCATIONS
+```
+
+Alternatively, set a generic proxy:
+
+```text
+TRANSCRIPT_HTTP_PROXY
+TRANSCRIPT_HTTPS_PROXY
+```
+
+## Edge Extension
+
+The `extension` folder contains a Microsoft Edge Manifest V3 extension for
+calling this API from the current YouTube tab.
+
+To load it locally:
+
+1. Open `edge://extensions`.
+2. Enable **Developer mode**.
+3. Click **Load unpacked**.
+4. Select the `extension` folder.
+
+The popup defaults to the Render API URL and also supports switching to a local
+backend through the settings button.
+
 ## API Endpoints
 
 ### Health Check
