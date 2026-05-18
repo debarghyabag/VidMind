@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: vidmind-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: ALLOWED_ORIGINS
+        value: "*"
+      - key: llm_endpoint_deb_gpt5
+        sync: false
+      - key: api_key_deb_gpt5
+        sync: false
+      - key: api_version_deb_gpt5
+        sync: false
