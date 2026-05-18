@@ -10,6 +10,7 @@ segments into timestamped chunks.
 - Fetch transcripts with `youtube-transcript-api`.
 - Return timestamped transcript segments.
 - Generate transcript chunks for downstream summarization or analysis.
+- Extract tech product specifications from review videos into structured JSON.
 - Expose a simple FastAPI API with interactive docs.
 
 ## Project Structure
@@ -98,9 +99,64 @@ GET /video/{video_id}/chunks
 
 Groups transcript segments into timestamped chunks.
 
+### Extract Product Specifications
+
+```http
+GET /video/{video_id}/product-specs
+```
+
+Extracts one or more reviewed tech products from the video transcript and saves
+the structured output to `app/data_storage/output/{video_id}.json`.
+
+You can also extract directly from a YouTube URL:
+
+```http
+POST /video/product-specs
+Content-Type: application/json
+
+{
+  "url": "https://www.youtube.com/watch?v=VIDEO_ID"
+}
+```
+
+Example output:
+
+```json
+{
+  "video_id": "VIDEO_ID",
+  "products": [
+    {
+      "product_name": "Example Phone Pro",
+      "brand": "Example",
+      "category": "smartphone",
+      "specifications": [
+        {
+          "name": "display",
+          "value": "6.7 inch OLED"
+        },
+        {
+          "name": "storage",
+          "value": "256 GB"
+        }
+      ],
+      "notable_features": [
+        "Bright display",
+        "Improved battery life"
+      ],
+      "price": "$999",
+      "availability": null,
+      "evidence": [
+        "Transcript snippet used by the extractor"
+      ]
+    }
+  ]
+}
+```
+
 ## Notes
 
 - Transcript extraction depends on transcript availability for the target
   YouTube video.
 - Generated data is stored under `app/data_storage`.
+- Product specification output is stored under `app/data_storage/output`.
 - Chunk generation expects transcript data to exist before chunks are created.

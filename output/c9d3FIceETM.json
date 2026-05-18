@@ -1,0 +1,170 @@
+{
+    "video_id": "c9d3FIceETM",
+    "products": [
+        {
+            "product_name": "Pixel 10",
+            "brand": "Google",
+            "category": "smartphone",
+            "specifications": [
+                {
+                    "name": "Display size",
+                    "value": "6.3 in screen"
+                },
+                {
+                    "name": "Display refresh rate",
+                    "value": "60 to 120 Hz (default set to 60 Hz; can enable smooth display to use 120 Hz)"
+                },
+                {
+                    "name": "Display variable refresh rate",
+                    "value": "Does not support 1 Hz; regular model limited to 60-120 Hz"
+                },
+                {
+                    "name": "Processor",
+                    "value": "Tensor G5 (TSMC 3 nanometer process)"
+                },
+                {
+                    "name": "Rear main camera",
+                    "value": "48 MP with optical image stabilization (OIS)"
+                },
+                {
+                    "name": "Rear telephoto camera",
+                    "value": "10.8 MP 5x optical zoom"
+                },
+                {
+                    "name": "Rear ultrawide camera",
+                    "value": "13 MP"
+                },
+                {
+                    "name": "Front camera",
+                    "value": "10.5 MP"
+                },
+                {
+                    "name": "Video (rear)",
+                    "value": "4K 30 fps (voice enhancement optional)"
+                },
+                {
+                    "name": "Video (front)",
+                    "value": "4K 30 fps with speech enhancement on; 4K 60 fps available if speech enhancement off"
+                },
+                {
+                    "name": "Video features",
+                    "value": "Blur video (rear only) to enhance bokeh; up to 20x digital zoom (practical use recommended up to ~11-12x)"
+                },
+                {
+                    "name": "Battery capacity",
+                    "value": "4,970 mAh"
+                },
+                {
+                    "name": "Battery life / Screen-on-time",
+                    "value": "Examples: 7 hrs 8 mins SOT in one test; up to ~9 hrs on Wi\u2011Fi; realistic 6 to ~8.5-9 hrs"
+                },
+                {
+                    "name": "Wireless charging",
+                    "value": "Magnetic wireless charging supported; wirelessly charges at 15 W with magnetic (MagSafe-like / Qi2) accessories"
+                },
+                {
+                    "name": "Storage (India)",
+                    "value": "Starts at 256 GB (fast UFS storage)"
+                },
+                {
+                    "name": "Storage (US base variant)",
+                    "value": "128 GB (not UFS4 storage)"
+                },
+                {
+                    "name": "SIM",
+                    "value": "India: single physical SIM; second SIM via eSIM"
+                },
+                {
+                    "name": "Fingerprint scanner",
+                    "value": "Ultrasonic fingerprint scanner"
+                },
+                {
+                    "name": "Back material / finish",
+                    "value": "Back uses Gorilla Glass Victus; matte glass finish that does not attract fingerprints"
+                },
+                {
+                    "name": "In-box contents",
+                    "value": "Phone and a charging cable"
+                },
+                {
+                    "name": "Speakers",
+                    "value": "Louder and clearer speakers compared to previous Pixel"
+                },
+                {
+                    "name": "Haptics",
+                    "value": "Very good flagship-grade haptics"
+                },
+                {
+                    "name": "Thermals",
+                    "value": "Runs warmer on active use/mobile data but heating much less than Pixel 9 series"
+                },
+                {
+                    "name": "Network / 5G speeds (tests)",
+                    "value": "Outskirts: ~262 Mbps download, ~56 Mbps upload; City: ~671 Mbps download, 86.8 Mbps upload (tested with AEL SIM in Hyderabad)"
+                }
+            ],
+            "notable_features": [
+                "Closes the gap between regular Pixel and Pro series in build quality and features",
+                "Now includes a 5x optical telephoto on the regular model (previously limited to Pro)",
+                "Improved video stabilization and reduced color shift when switching lenses vs earlier Pixels",
+                "Good overall camera performance; portrait blur can be hit-or-miss on fine edges/hair",
+                "Smooth software experience with no major lag observed",
+                "Magnetic accessory support (MagSafe-like) added to the Pixel lineup"
+            ],
+            "price": null,
+            "availability": "India variant starts at 256 GB with UFS storage; US base variant mentioned as 128 GB (not UFS4). Single physical SIM in India with eSIM for second slot.",
+            "evidence": [
+                "this is the Pixel 10 that we have ... I have been actually testing it for the last four five days",
+                "this is the Pixel 10 that is having a 6.3 in screen",
+                "the good thing is that this can also go to 120 Hz refresh rate ... this one just 60 to 120 Hz",
+                "we'll talk about the processor, the Tensil 5 ... this is the tensor G5 ... based on TSMC 3 nanometer process",
+                "even the regular Pixel 10 have a triple camera setup that is a 5x telephoto zoom",
+                "the main camera is still a 48 MP which has optical image stabilization",
+                "The new addition is a ... 10.8 MP 5x zoom camera ... the ultra wide is now a 13 MP ... front camera ... 10.5 MP",
+                "recording this video with the rearfacing camera of the Pixel. It's actually set to 4K actually 30 fps and I've also enabled voice enhancement",
+                "I'm shooting this video with the front-facing camera ... I'm recording in 4K 30fps and I have the speech enhancement option on ... If you switch that speech enhancement option off, then you can go to 4K 60 fps",
+                "it has magnets over here. So it does support that chi charging ... wirelessly will charge at 15 W",
+                "this is having a 4,970 mia battery",
+                "I got a screen on time of 7 hours 8 minutes ... also got screen on time of about almost close to 9 hours on this one",
+                "in India it is starting with 256 GB of storage. So uh you're getting that fast UFS storage here ... in US the base variant comes with 128 GB of storage and that's not UFS 4 storage",
+                "ultrasonic fingerprint scanner",
+                "solid build quality ... back is also Gorilla Glass Victors ... this one is having that matte glass that does not attract fingerprints",
+                "the speakers are a lot louder, I would say, and a lot clearer also at higher volumes",
+                "the haptic feedback was a little bit different between the regular and the Pro ... the haptic feedback was as good as any flagship",
+                "heating is a lot less compared to the Pixel 9 series",
+                "I tested it with my AEL SIM ... 5G signal ... speed of 262 and ... upload of 50 ... that's almost 56 ... in the main city I got a download of 671 and upload of 86.8",
+                "inside the box ... the phone itself and just this charging cable"
+            ]
+        },
+        {
+            "product_name": "Pixel 10 Pro XL",
+            "brand": "Google",
+            "category": "smartphone",
+            "specifications": [
+                {
+                    "name": "Relative size",
+                    "value": "Far bigger size (than regular Pixel 10)"
+                },
+                {
+                    "name": "Bezels",
+                    "value": "Slightly lesser bezels compared to regular Pixel 10"
+                },
+                {
+                    "name": "Display variable refresh rate",
+                    "value": "Proper variable refresh rate: can move from 1 Hz to 120 Hz"
+                }
+            ],
+            "notable_features": [
+                "Larger device with smaller bezels",
+                "Has a proper variable refresh rate down to 1 Hz which helps battery life (contrasted with regular Pixel 10's 60-120 Hz)"
+            ],
+            "price": null,
+            "availability": null,
+            "evidence": [
+                "this is the bigger Pixel what do you say 10 Pro XL having a far bigger size",
+                "the Pro uh has slightly lesser bezels",
+                "the Pro has proper variable refresh rate. It can move from 1 Hz to 120"
+            ]
+        }
+    ]
+}
