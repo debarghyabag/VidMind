@@ -1,8 +1,6 @@
 # VidMind
 
-VidMind is a FastAPI backend for working with YouTube videos. It can extract a
-video ID from a YouTube URL, fetch the video's transcript, and group transcript
-segments into timestamped chunks.
+VidMind is a FastAPI-based backend service that transforms YouTube video content into structured, AI-ready data. It extracts video IDs from YouTube URLs, retrieves available transcripts, organizes transcript segments into timestamped chunks, generates summaries, and can extract structured product specifications from tech review videos for downstream analysis and storage.
 
 ## Features
 
