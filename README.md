@@ -1,15 +1,29 @@
 # VidMind
 
-VidMind is a FastAPI-based backend service that transforms YouTube video content into structured, AI-ready data. It extracts video IDs from YouTube URLs, retrieves available transcripts, organizes transcript segments into timestamped chunks, generates summaries, and can extract structured product specifications from tech review videos for downstream analysis and storage.
+VidMind is a FastAPI-based backend service that transforms YouTube videos into structured, AI-ready data. It extracts video IDs from YouTube URLs, retrieves available transcripts, organizes transcript segments into timestamped chunks, generates concise summaries, and extracts structured product specifications from tech review videos for downstream analysis and storage.
+
+The system is especially useful for converting long-form product reviews, comparisons, and technical discussions into clean JSON outputs that can power search, product comparison tools, recommendation systems, dashboards, or analytics workflows.
 
 ## Features
 
-- Parse video IDs from common YouTube URL formats.
-- Fetch transcripts with `youtube-transcript-api`.
-- Return timestamped transcript segments.
-- Generate transcript chunks for downstream summarization or analysis.
-- Extract tech product specifications from review videos into structured JSON.
-- Expose a simple FastAPI API with interactive docs.
+- Parse video IDs from common YouTube URL formats
+- Fetch YouTube transcripts using `youtube-transcript-api`
+- Store transcript data as JSON
+- Group transcript segments into timestamped chunks
+- Generate AI-powered video summaries
+- Extract structured product specifications from tech review videos
+- Support multiple products in a single video
+- Save generated outputs under `app/data_storage`
+- Expose a clean FastAPI API with interactive Swagger documentation
+
+## Tech Stack
+
+- Python
+- FastAPI
+- Pydantic
+- LangChain
+- Azure OpenAI
+- YouTube Transcript API
 
 ## Project Structure
 
@@ -18,8 +32,9 @@ app/
   api/router/          API routes
   core/                Request controllers
   models/schemas/      Pydantic response and request models
-  services/            Transcript extraction and chunking logic
+  services/            Transcript, chunking, summary, and extraction services
   utils/               Path and YouTube URL helpers
+  data_storage/        Generated transcript, chunk, summary, and product JSON files
 ```
 
 ## Setup
@@ -96,6 +111,15 @@ GET /video/{video_id}/chunks
 ```
 
 Groups transcript segments into timestamped chunks.
+
+### Generate Summary
+
+```http
+GET /video/{video_id}/summary
+```
+
+Generates an AI-powered summary from the video's transcript chunks and saves it
+to `app/data_storage/summary_json/{video_id}.json`.
 
 ### Extract Product Specifications
 
