@@ -55,3 +55,27 @@ async def extract_summary(video_id: str):
         )
 
     return get_video_summary(video_id)
+
+
+@router.get("/video/{video_id}/product-specs")
+async def extract_product_specifications(video_id: str):
+
+    if not video_id:
+        return ErrorResponse(
+            error="Invalid video ID"
+        )
+
+    return get_video_product_specs(video_id)
+
+
+@router.post("/video/product-specs")
+async def extract_product_specifications_from_url(request: AnalyzeVideoRequest):
+
+    video_id = _extract_video_id(request.url)
+
+    if not video_id:
+        return ErrorResponse(
+            error="Invalid YouTube URL"
+        )
+
+    return get_video_product_specs(video_id)

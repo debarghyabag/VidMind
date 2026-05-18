@@ -7,6 +7,7 @@ from app.services.chunking_service import chunking_function
 from app.models.schemas.transcript_schema import ErrorResponse
 from app.utils.paths import *
 from app.services.summarization_service import summarize_video
+from app.services.product_specs_service import extract_product_specs
 
 
 
@@ -72,3 +73,31 @@ def get_video_summary(video_id : str):
         json.dump(summary.model_dump(), f, indent=4)
 
     return summary
+
+
+def get_video_product_specs(video_id: str):
+    chunk_file_path = CHUNKS_STORAGE_PATH / f"{video_id}.json"
+
+    if not chunk_file_path.exists():
+        chunk_response = get_video_chunks(video_id)
+        if isinstance(chunk_response, ErrorResponse):
+            return chunk_response
+        chunks = chunk_response.model_dump()["chunks"]
+    else:
+        with open(chunk_file_path, "r", encoding="utf-8") as f:
+            chunk_data = json.load(f)
+            chunks = chunk_data["chunks"]
+
+    if not chunks:
+        return ErrorResponse(
+            error="No chunks found for the given video ID"
+        )
+
+    product_specs = extract_product_specs(video_id, chunks)
+    output_file_path = OUTPUT_STORAGE_PATH / f"{video_id}.json"
+    output_file_path.parent.mkdir(parents=True, exist_ok=True)
+
+    with open(output_file_path, "w", encoding="utf-8") as f:
+        json.dump(product_specs.model_dump(), f, indent=4)
+
+    return product_specs
