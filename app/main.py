@@ -35,4 +35,10 @@ async def root():
         "message": "VidMind backend is live"
     }
 
+
+@app.head("/")
+async def root_head():
+    return None
+
+
 app.include_router(video_id_router)

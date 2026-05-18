@@ -85,6 +85,7 @@ as a free Render web service.
 
 ```text
 llm_endpoint_deb_gpt5
+llm_deployment_deb_gpt5
 api_key_deb_gpt5
 api_version_deb_gpt5
 ALLOWED_ORIGINS

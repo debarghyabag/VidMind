@@ -10,6 +10,8 @@ services:
         value: "*"
       - key: llm_endpoint_deb_gpt5
         sync: false
+      - key: llm_deployment_deb_gpt5
+        sync: false
       - key: api_key_deb_gpt5
         sync: false
       - key: api_version_deb_gpt5
