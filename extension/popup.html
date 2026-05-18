@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VidMind</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div class="brand">
+          <img src="icons/icon-32.svg" alt="" class="logo">
+          <div>
+            <h1>VidMind</h1>
+            <p id="videoStatus">Reading current tab</p>
+          </div>
+        </div>
+        <button id="settingsToggle" class="icon-button" type="button" title="API settings" aria-label="API settings">
+          <span aria-hidden="true">API</span>
+        </button>
+      </header>
+
+      <section id="settingsPanel" class="settings" hidden>
+        <label for="apiUrl">API URL</label>
+        <div class="inline">
+          <input id="apiUrl" type="url" spellcheck="false">
+          <button id="saveApiUrl" class="small-button" type="button">Save</button>
+        </div>
+      </section>
+
+      <section class="actions" aria-label="VidMind actions">
+        <button id="productSpecsButton" class="primary-button" type="button">
+          Product Specs
+        </button>
+        <button id="summaryButton" class="secondary-button" type="button">
+          Summary
+        </button>
+        <button id="analyzeButton" class="secondary-button" type="button">
+          Video ID
+        </button>
+      </section>
+
+      <section id="message" class="message" role="status" hidden></section>
+      <section id="result" class="result" aria-live="polite"></section>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

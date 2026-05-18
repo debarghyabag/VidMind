@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "VidMind",
+  "version": "1.0.0",
+  "description": "Analyze the current YouTube video with the VidMind API.",
+  "permissions": ["activeTab", "storage", "tabs"],
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "https://youtu.be/*",
+    "https://vidmind-45l8.onrender.com/*",
+    "http://127.0.0.1:8000/*",
+    "http://localhost:8000/*"
+  ],
+  "action": {
+    "default_title": "VidMind",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icons/icon-16.svg",
+    "32": "icons/icon-32.svg",
+    "48": "icons/icon-48.svg",
+    "128": "icons/icon-128.svg"
+  }
+}
