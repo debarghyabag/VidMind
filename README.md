@@ -73,6 +73,37 @@ Interactive API documentation is available at:
 http://127.0.0.1:8000/docs
 ```
 
+## Deploy on Render
+
+This repo includes a `render.yaml` blueprint for deploying the FastAPI backend
+as a free Render web service.
+
+1. Push this project to GitHub.
+2. In Render, choose **New** > **Blueprint**.
+3. Connect your GitHub repository and apply the `render.yaml` blueprint.
+4. Add these environment variables in Render:
+
+```text
+llm_endpoint_deb_gpt5
+api_key_deb_gpt5
+api_version_deb_gpt5
+ALLOWED_ORIGINS
+```
+
+For quick testing, `ALLOWED_ORIGINS` can be `*`. For production, set it to the
+specific extension or frontend origins that should call the API.
+
+Render will use:
+
+```bash
+pip install -r requirements.txt
+uvicorn app.main:app --host 0.0.0.0 --port $PORT
+```
+
+Free Render services can sleep after inactivity, so the first request after an
+idle period may take a little longer. Files written to local storage may also be
+lost after restarts or redeploys, so use external storage for long-term results.
+
 ## API Endpoints
 
 ### Health Check

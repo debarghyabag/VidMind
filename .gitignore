@@ -19,6 +19,8 @@ Thumbs.db
 
 # Data Storage
 data_storage/
+app/data_storage/
+output/
 
 
 #scratch folder
